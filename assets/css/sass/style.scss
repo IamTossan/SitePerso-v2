@@ -1,0 +1,229 @@
+
+
+@import "bootstrapMq";
+
+
+$back1: #293f50;
+$blue: #648880;
+$lightblue: #a1d3b0;
+
+body{
+  font-family: Lato;
+}
+
+.container-fluid{
+  max-width: 1000px;
+}
+
+h2{
+  font-size: 1.5em;
+}
+
+
+
+
+/***********************  HEADER  ******************************/
+
+header{
+  background: $back1;
+  text-align: center;
+  h1, a, button{
+    color: #fff;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+  h2{
+    color: $blue;
+  }
+  h1, .h2{
+
+    font-weight: 100;
+  }
+  @include mQ($sm){
+    h1 a{
+
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: 2px solid #293f50;
+      border-radius: 10px;
+      padding: 10px;
+      transition: border 0.8s;
+      color: #fff;
+      &:hover{
+        border: 2px solid #ddd;
+        color: #fff;
+      }
+    }
+    nav li{
+      padding: 10px;
+      a{
+        border-bottom: 3px solid #293f50;
+        transition: border-bottom 0.8s;
+
+        &:hover{
+          border-bottom: 3px solid #fff;
+        }
+      }
+    }
+    .nav>li>a{
+      display: inherit;
+      padding: 7px 0;
+      &:focus, &:hover{
+        background-color: inherit;
+        color: #fff;
+      }
+    }
+    /*.nav>li>a:focus, .nav>li>a:hover{
+      background-color: inherit;
+      color: #fff;
+    }*/
+    .nav{
+      margin-bottom: 10px;
+    }
+  }
+  @include mQ($md){
+    h2{
+
+      font-size: 30px;
+    }
+  }
+}
+
+
+
+
+/*********************** END HEADER ********************************/
+
+/*****************************  FOOTER  ********************************/
+
+footer{
+  background: $back1;
+  text-align: center;
+  h3, li, a, a:hover{
+    color: #fff;
+  }
+  .btn{
+    margin: 5px auto;
+  }
+  div.row{
+    position: relative;
+  }
+  a[href="#top"]{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+
+    button{
+      margin: 0;
+    }
+
+  }
+  a{
+    border-bottom: 1px solid $back1;
+    transition: border-bottom 0.8s;
+    &:hover{
+      text-decoration: none;
+      border-bottom: 1px solid #fff;
+    }
+  }
+}
+
+
+/************************** END FOOTER *********************************/
+
+/*********************** POST HEADER ***********************************/
+
+.post-header{
+  background: linear-gradient(to right, #a1d3b0, #f6f1d3);
+  text-align: center;
+  padding-bottom: 10px;
+  h3{
+
+  }
+  a{
+    letter-spacing: 0.15em;
+    transition: letter-spacing 0.6s;
+    width: 130px;
+
+    &:hover{
+      letter-spacing: 0.20em;
+    }
+  }
+  p{
+    padding: 0 3%;
+    font-size: 0.8em;
+  }
+  @include mQ($sm){
+    a{
+      margin: 10px;
+    }
+  }
+}
+
+
+
+/******************* COMPETENCES *********************************/
+
+
+
+#competences h2{
+  text-align: center;
+}
+
+#competences div div{
+  margin: 5px auto;
+}
+
+#competences div div div{
+  //height: 250px;
+  width: 100%;
+  max-width: 350px;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid $lightblue;
+  border-radius: 3%;
+  box-shadow: 2px 2px 5px #ccc;
+  img{
+    //margin: 0 auto;
+    //height: 100%;
+    width: 100%;
+    //float: left;
+  }
+  p{
+    width: 60%;
+    font-size: 0.8em;
+    margin: 10px auto;
+    position: relative;
+    top: 40%;
+    left: 5%;
+  }
+}
+
+/************************** PROJETS ****************************/
+
+#projets{
+  text-align: center;
+  div div{
+    margin: 5px auto;
+  }
+  div div div{
+    border: 1px solid $lightblue;
+    border-radius: 3%;
+    padding: 5%;
+    box-shadow: 2px 2px 5px #ccc;
+    p:first-of-type{
+      margin-top: 5%;
+    }
+    a{
+      letter-spacing: 0.15em;
+      transition: letter-spacing 0.6s;
+      width: 130px;
+
+      &:hover{
+        letter-spacing: 0.20em;
+      }
+    }
+  }
+}
