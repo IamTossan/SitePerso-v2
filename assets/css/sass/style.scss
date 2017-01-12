@@ -185,22 +185,63 @@ footer{
   border: 1px solid $lightblue;
   border-radius: 3%;
   box-shadow: 2px 2px 5px #ccc;
+  position: relative;
+
   img{
     //margin: 0 auto;
-    //height: 100%;
-    width: 100%;
-    //float: left;
+    height: 80px;
+    width: 80px;
+    float: left;
+    margin: 10px;
+
   }
   p{
     width: 60%;
-    font-size: 0.8em;
-    margin: 10px auto;
-    position: relative;
-    top: 40%;
-    left: 5%;
+
+    margin: 10% auto;
+
+    //top: 40%;
+    //left: 5%;
+    float: right;
   }
 }
 
+.come-in {
+  transform: translateX(20px);
+  opacity: 0;
+  animation: come-in 0.8s ease forwards;
+  &:nth-child(odd) {
+    animation-duration: 0.6s; /* So they look staggered */
+  }
+  @include mQ($sm){
+    &:nth-child(odd){
+      transform: translateX(-20px);
+
+    }
+  }
+  @include mQ($md){
+    &:nth-child(3n){
+      transform: translateX(-20px);
+      animation-duration: 0.8s;
+    }
+    &:nth-child(3n + 1){
+      transform: translateX(10px);
+      animation-duration: 0.6s;
+    }
+    &:nth-child(3n + 2){
+      transform: translateX(20px);
+      animation-duration: 0.8s;
+    }
+  }
+}
+
+
+@keyframes come-in {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 /************************** PROJETS ****************************/
 
 #projets{
