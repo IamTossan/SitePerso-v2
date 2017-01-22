@@ -207,15 +207,20 @@ footer{
 }
 
 .come-in {
-  transform: translateX(20px);
+  transform: translateY(15px);
   opacity: 0;
   animation: come-in 0.8s ease forwards;
   &:nth-child(odd) {
     animation-duration: 0.6s; /* So they look staggered */
   }
   @include mQ($sm){
+    transform: translateY(0);
     &:nth-child(odd){
       transform: translateX(-20px);
+
+    }
+    &:nth-child(even){
+      transform: translateX(20px);
 
     }
   }
@@ -239,6 +244,7 @@ footer{
 @keyframes come-in {
   to {
     transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
